@@ -314,6 +314,13 @@ define U-Boot/station-p2-rk3568
     firefly_station-p2
 endef
 
+define U-Boot/xgp-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=XGP Board
+  BUILD_DEVICES:= \
+    nlnet_xgp
+endef
+
 # RK3588 boards
 
 define U-Boot/rk3588/Default
@@ -399,6 +406,7 @@ UBOOT_TARGETS := \
   rock-3a-rk3568 \
   rock-3b-rk3568 \
   station-p2-rk3568 \
+  xgp-rk3568 \
   generic-rk3588 \
   nanopc-t6-rk3588 \
   orangepi-5-plus-rk3588 \
